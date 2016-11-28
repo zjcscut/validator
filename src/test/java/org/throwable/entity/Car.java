@@ -1,5 +1,7 @@
 package org.throwable.entity;
 
+import org.throwable.Status;
+
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
@@ -18,6 +20,8 @@ public class Car {
 	private String license;
 	@Min(2)
 	private Integer seatCount;
+	@Status
+	private String status;
 
 	public Car() {
 	}
@@ -26,6 +30,14 @@ public class Car {
 		this.name = name;
 		this.license = license;
 		this.seatCount = seatCount;
+	}
+
+
+	public Car(String name, String license, Integer seatCount,String status) {
+		this.name = name;
+		this.license = license;
+		this.seatCount = seatCount;
+		this.status = status;
 	}
 
 	public String getName() {
@@ -50,5 +62,13 @@ public class Car {
 
 	public void setSeatCount(Integer seatCount) {
 		this.seatCount = seatCount;
+	}
+
+	public String getStatus() {
+		return status;
+	}
+
+	public void setStatus(String status) {
+		this.status = status;
 	}
 }

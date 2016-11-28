@@ -75,4 +75,12 @@ public class TestScope {
 		System.out.println(validateBean(car));
 	}
 
+	@Test
+	public void Test6() throws Exception {
+		Car car = new Car("car", "zss", 2,"yes");
+		validateBean(car);
+	}
+
+
+
 }
